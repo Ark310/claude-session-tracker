@@ -1,0 +1,32 @@
+{
+  "name": "claude-session-manager",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname ${BIND_HOST:-127.0.0.1}",
+    "dev:lan": "BIND_HOST=0.0.0.0 next dev --hostname 0.0.0.0",
+    "build": "next build",
+    "start": "next start",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "next": "16.2.6",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^6.0.2",
+    "@vitest/coverage-v8": "^4.1.7",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vitest": "^4.1.7"
+  },
+  "author": "Abdul Raqeeb Khatri <abdulraqeeb310@gmail.com>",
+  "license": "MIT"
+}
