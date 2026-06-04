@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', ui-monospace, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: #020c02;
+  color: #4ade80;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', ui-monospace, monospace;
+  scrollbar-width: thin;
+  scrollbar-color: #166534 #020c02;
+}
+
+/* ASCII terminal boxes */
+.terminal-box {
+  border: 1px solid #14532d;
+  padding: 0.75rem;
+  position: relative;
+}
+
+.terminal-box-title {
+  position: absolute;
+  top: -0.6rem;
+  left: 0.75rem;
+  background: #020c02;
+  padding: 0 0.4rem;
+  font-size: 0.6rem;
+  color: #16a34a;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+}
+
+/* Blinking live dot */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.1; }
+}
+
+.live-dot {
+  animation: blink 1.2s ease-in-out infinite;
+}
+
+/* Blinking cursor */
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor-blink::after {
+  content: '▋';
+  animation: cursor-blink 1s step-end infinite;
+  color: #4ade80;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020c02;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #166534;
+  border-radius: 2px;
+}
+
+/* Selection */
+::selection {
+  background: #166534;
+  color: #bbf7d0;
+}
