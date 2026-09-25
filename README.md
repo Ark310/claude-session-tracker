@@ -13,6 +13,10 @@
 
 _📸 Screenshot coming soon._
 
+<!-- showcase:banner:start -->
+> 🧭 Part of **Abdul Raqeeb Khatri's portfolio**: [📂 Hub](https://github.com/Ark310/portfolio) · [🌐 Site](https://ark310.github.io) · [💼 Experience](https://github.com/Ark310/experience)
+<!-- showcase:banner:end -->
+
 ## 🎯 The Problem
 
 Claude Code stores every session as a raw JSONL file buried in `~/.claude/projects/`. Once you have dozens of repositories and hundreds of sessions, there is no built-in way to search them, see which ones are still running, review what a past session actually did, or safely clean up stale files.
@@ -20,6 +24,20 @@ Claude Code stores every session as a raw JSONL file buried in `~/.claude/projec
 ## 💡 The Solution
 
 Claude Session Manager mounts a local Next.js server that scans those JSONL files and presents them as a clean, keyboard-navigable dashboard. You can replay full conversations, spot live vs. idle vs. ended sessions at a glance, kill runaway processes with a confirmation gate, and soft-delete old sessions to a recoverable trash — all with every action written to an append-only audit log.
+
+<!-- showcase:why-impact:start -->
+## 💡 Why I Built It
+
+Claude Code keeps every session as a raw JSONL file. With dozens of repos and hundreds of sessions there was no way to search them, see which were still running, or clean up stale files safely.
+
+## 📈 Impact
+
+- Searchable, keyboard-driven session list with full conversation replay and per-model token stats.
+- Destructive actions are safe by design: a typed confirmation gate for kills, soft delete to a recoverable trash, and an append-only audit log.
+- A read-only mode disables every mutation at the server-action level.
+
+`audit log` · `read-only mode` · `Vitest suite`
+<!-- showcase:why-impact:end -->
 
 ## ✨ Features
 
@@ -44,7 +62,7 @@ Claude Session Manager mounts a local Next.js server that scans those JSONL file
 
 ```bash
 # Clone and enter the project directory
-git clone https://github.com/abdulraqeebkhatri/claude-session-tracker.git
+git clone https://github.com/Ark310/claude-session-tracker.git
 cd claude-session-tracker/claude-session-manager
 
 # Install dependencies
@@ -95,3 +113,11 @@ The encoded path converts `/` → `-` in the project's absolute path.
 ## 📄 License
 
 MIT © Abdul Raqeeb Khatri
+
+<!-- showcase:footer:start -->
+---
+
+<p align="center"><a href="https://github.com/Ark310/portfolio">← Back to the portfolio hub</a> · <a href="https://ark310.github.io">Interactive site</a> · <a href="https://github.com/Ark310/experience">Experience</a></p>
+
+**Related projects:** [Knowledge Base Assistant](https://github.com/Ark310/knowledge-base-assistant) · [BLNS: Sanctions Screening RAG](https://github.com/Ark310/blns-sanctions-screening-rag) · [Local LLM Setup](https://github.com/Ark310/local-llm-setup)
+<!-- showcase:footer:end -->
